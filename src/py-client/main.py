@@ -1,11 +1,12 @@
 import nsq
 
-NSQ_LOOKUPD_URI = "http://nsqlookupd:4160"
+NSQ_LOOKUPD_URI = "nsqlookupd:4161"
 
 
 def handler(message):
     print(message)
     return True
+
 
 if __name__ == '__main__':
     r = nsq.Reader(

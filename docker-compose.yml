@@ -29,8 +29,12 @@ services:
     build: src/py-client
     depends_on:
       - nsqlookupd
+    environment:
+      - DEBUG=nsqpy:*
 
   nodeclient:
     build: src/node-client
     depends_on:
       - nsqlookupd
+    environment:
+      - DEBUG=nsqjs:*
